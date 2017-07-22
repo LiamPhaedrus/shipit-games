@@ -97,10 +97,6 @@ class WarPage extends Component {
     } else {
       this.setState({message: "War!"})
       let pot = []
-      // p1Cards.shift()
-      // p2Cards.shift()
-      // pot.push(this.state.player1Show)
-      // pot.push(this.state.player2Show)
 
       for (let i = 0; i < 4; i++) {
         console.log("p1 card: " + p1Cards[0].code)
@@ -115,7 +111,6 @@ class WarPage extends Component {
           player2Show: p2Cards[0]
         })
         if ( cardValues[p1Cards[0].value] > cardValues[p2Cards[0].value] ) {
-          console.log("p1 card count" + this.state.player1Cards.length)
           p1Cards.shift()
           p2Cards.shift()
           p1Cards.push(this.state.player1Show)
@@ -128,7 +123,6 @@ class WarPage extends Component {
             pot: pot
           })
         } else if ( cardValues[p2Cards[0].value] > cardValues[p1Cards[0].value] ) {
-          console.log("p1 card count" + this.state.player1Cards.length)
           p1Cards.shift()
           p2Cards.shift()
           p2Cards.push(this.state.player2Show)

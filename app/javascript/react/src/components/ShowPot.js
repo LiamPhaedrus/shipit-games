@@ -1,10 +1,7 @@
 import React, { Component }  from 'react';
 
 const ShowPot = (props) => {
-  // let image = ""
-  // if (props.card) {
-  //   image = <img src={props.card.image} />
-  // }
+
   let cards = ""
   if (props.cards.length >= 1) {
     cards = props.cards.map(card => {
